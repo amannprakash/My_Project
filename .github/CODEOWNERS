@@ -1,0 +1,14 @@
+# This is a comment.
+# Use @username or @org/team-name
+
+# 1. Global fallback (everyone on the DevOps team reviews everything else)
+*       @my-org/devops-team
+
+# 2. Terraform infrastructure (requires senior review)
+/infra/       @my-org/devops-senior-engineers
+
+# 3. GitHub Actions workflows (highly sensitive, security check)
+.github/workflows/    @my-org/devops-team @my-org/security-audit-team
+
+# 4. Specific critical files
+/k8s/production-config.yaml   @my-org/platform-leads
