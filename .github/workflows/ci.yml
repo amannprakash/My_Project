@@ -1,0 +1,13 @@
+name: CI Workflow
+on: [pull_request]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Terraform Validate
+        run: terraform validate
+      # Add linting, security scans, or plan checks here
+
+# issue fix
